@@ -2,7 +2,7 @@ import app from './app';
 import express from 'express';
 
 //Controller Imports
-import basicController from './controllers/basic.controller';
+import basicController from './controllers/basicController';
 
 const routes = express();
 

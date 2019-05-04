@@ -33,7 +33,8 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start-dev": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "npm run server",
     "server": "nodemon ./bin/dev",
     "client": "node start-client.js",
     "clean": "rmdir /s /q dist",
@@ -50,5 +51,17 @@
     "url": "https://github.com/tony-molumby/boilerplate/issues"
   },
   "homepage": "https://github.com/tony-molumby/boilerplate#readme",
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
